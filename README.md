@@ -13,6 +13,15 @@ Planned:
 
 * Building Go modules and Docker images with `goreleaser`
 
+# Key Points for latest go release 1.19
+
+* certain module not required for go-- run this command go mod tidy  to clean up the go.mod file and the go.sum file in the current directory. It removes any unused modules that are no longer needed by the code in the project.
+* go test -v ./... cmd in WSL(ubuntu 20.0LTS) required gcc complier -- run these command 
+                                   sudo apt update
+                                   sudo apt install build-essential
+                                   sudo apt-get install manpages-dev
+                                   gcc --version
+
 ## Want _moar_?!
 
 There is a more advanced example in [olliefr/docker-gs-ping-roach](https://github.com/olliefr/docker-gs-ping-roach) using [CockroachDB](https://github.com/cockroachdb/cockroach).
